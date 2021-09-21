@@ -1,0 +1,131 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: #121212;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+/* navbar */
+#logo {
+    margin: 6px 30px;
+}
+#logo img{
+    width: 100px;
+    height: 80px;
+}
+#nbar{
+    display: flex;
+    position: relative;
+    align-items: center;
+    height: 80px;
+}
+#nbar::before{
+    content: "";
+    background-color: rgb(112, 91, 112);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+#nbar ul{
+    display: flex;
+    margin: 0px 80px;
+}
+.bar{
+    list-style: none;
+}
+#nbar a{
+    text-decoration: none;
+    padding: 0px 40px;
+    color: navajowhite;
+    border-radius: 20px;
+}
+#nbar a:hover{
+    color: palevioletred;
+    background-color: wheat;
+   
+}
+/* section */
+#cont{
+    /* border: 2px solid plum; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 60px 60px;
+    height: 400px;
+    
+}
+#cont::before{
+    /* border: 2px solid plum; */
+    content: "";
+    background: url(/Contant/milk-valley.jpg) no-repeat center center/cover;
+    position: absolute;
+    width: 1230px;
+    height: 400px;
+    z-index: -1;
+    opacity: 0.35 ;
+}
+#slider{
+    /* border: 2px solid palegreen; */
+    margin: 13px;
+    padding: 18px;
+}
+/* clients */
+#clients{
+    /* border: 2px solid forestgreen; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    margin: 15px;
+}
+.clients-items{
+    /* border: 2px solid rgb(142, 191, 142); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    height: 250px;
+    margin: 30px;
+    padding: 20px;
+    background-color: #1f1b24;
+    border-radius: 100px;
+}
+.clients-items img {
+    width: 150px;
+    height: 120px;
+    margin: 6px;
+}
+/* form */
+#form{
+ /* border: 4px solid white; */
+ margin: 60px 20px;
+ padding: 10px 90px;
+}
+#form form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: rgb(238, 225, 225);;
+}
+/* footer */
+footer{
+    text-align: center;
+    color: rgb(238, 225, 225);
+}
+/* utility  */
+.h-1{
+    text-align: center;
+    color: rgb(238, 225, 225);
+}
+.p-1{
+    text-align: center;
+    color: rgb(238, 225, 225);
+}
+#h1-clients{
+    text-align: center;
+    color: rgb(238, 225, 225);
+}
