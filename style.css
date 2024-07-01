@@ -155,4 +155,11 @@ body {
     .block {
         display: block;
     }
+
+    .socials-cont-col {
+        display: flex;
+        height: 10vh;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
 }
