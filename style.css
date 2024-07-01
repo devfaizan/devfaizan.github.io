@@ -32,6 +32,15 @@ body {
     backdrop-filter: blur(10px);
 }
 
+.top-bar-button {
+    width: 30px;
+    height: 30px;
+}
+
+#top-bar-button-1 {
+    padding-left: 2px;
+}
+
 .logo-img {
     width: 50%;
 }
@@ -97,7 +106,7 @@ body {
 }
 
 .main-cont {
-    height: 190vh;
+    height: 90vh;
 }
 
 .main-heading {
