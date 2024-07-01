@@ -13,6 +13,41 @@ function toggleMenu(event) {
     }
 }
 
+// Hide menu if clicked outside
+document.addEventListener('click', function (event) {
+    const menu = document.getElementById('theme-menu');
+    if (!menu.contains(event.target) && !event.target.closest('.border.rounded-circle')) {
+        menu.style.display = 'none';
+    }
+});
+
+function toggleMobileMenu(event) {
+    const menu = document.getElementById('mobile-menu');
+    const button = event.currentTarget;
+
+    if (menu.style.display === 'none' || menu.style.display === '') {
+        menu.style.display = 'block';
+    } else {
+        menu.style.display = 'none';
+    }
+}
+
+function closeMobileMenu() {
+    const menu = document.getElementById('mobile-menu');
+    menu.style.display = 'none';
+}
+
+// Attach event listeners to the links and cross button after the DOM has loaded
+document.addEventListener('DOMContentLoaded', (event) => {
+    const links = document.querySelectorAll('.mobile-menu-nav-link');
+    links.forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
+    });
+
+    const crossButton = document.querySelector('.cross-button');
+    crossButton.addEventListener('click', closeMobileMenu);
+});
+
 function setTheme(theme) {
     const body = document.body;
     const menu = document.getElementById('theme-menu');
@@ -26,10 +61,4 @@ function setTheme(theme) {
     menu.style.display = 'none'; // Hide the menu
 }
 
-// Hide menu if clicked outside
-document.addEventListener('click', function (event) {
-    const menu = document.getElementById('theme-menu');
-    if (!menu.contains(event.target) && !event.target.closest('.border.rounded-circle')) {
-        menu.style.display = 'none';
-    }
-});
+

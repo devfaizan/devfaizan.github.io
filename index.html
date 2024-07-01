@@ -19,9 +19,9 @@
         </div>
         <nav class="hidenav mt-3">
             <ul class="list d-flex">
-                <li class="list-items"><a class="list-links" href="#">About</a></li>
-                <li class="list-items"><a class="list-links" href="#">Blog</a></li>
-                <li class="list-items"><a class="list-links" href="#">Timeline</a></li>
+                <li class="list-items"><a class="list-links" href="about.html">About</a></li>
+                <li class="list-items"><a class="list-links" href="blog.html">Blog</a></li>
+                <li class="list-items"><a class="list-links" href="timeline.html">Timeline</a></li>
             </ul>
         </nav>
         <div class="d-flex">
@@ -34,21 +34,43 @@
                     </path>
                 </svg>
             </div>
-            <div class="menu" id="theme-menu">
-                <div class="menu-item" onclick="setTheme('light')">Light</div>
-                <div class="menu-item" onclick="setTheme('dark')">Dark</div>
+            <div class="thememenu" id="theme-menu">
+                <div class="thememenu-item" onclick="setTheme('light')">Light</div>
+                <div class="thememenu-item" onclick="setTheme('dark')">Dark</div>
             </div>
             &nbsp;&nbsp;
-            <div class="hidemenu block border rounded-circle top-bar-button" id="top-bar-button-2" role="button">
+            <div class="hidemenu block border rounded-circle top-bar-button" id="top-bar-button-2"
+                onclick="toggleMobileMenu(event)" role="button">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" id="svg-2">
                     <path stroke-linecap="round" stroke-linejoin="round"
                         d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
                 </svg>
             </div>
+            <div class="mobile-menu" id="mobile-menu">
+                <div class="mobile-menu-top d-flex justify-content-between align-items-center">
+                    <div class="logo ms-3">
+                        <a href="#">
+                            <img src="https://devfaizan.github.io/testimages/logoflop.png" alt="Logo" class="logo-img">
+                        </a>
+                    </div>
+                    <div class="fw-bold fs-1 me-3 cross-button">X</div>
+                </div>
+                <div class="d-flex justify-content-end">
+                    <ul class="mobile-menu-nav justify-content-end text-end me-3">
+                        <li class="list-items mobile-menu-nav-item"><a class="list-links mobile-menu-nav-link"
+                                href="about.html">About</a></li>
+                        <li class="list-items mobile-menu-nav-item"><a class="list-links mobile-menu-nav-link"
+                                href="blog.html">Blog</a></li>
+                        <li class="list-items mobile-menu-nav-item"><a class="list-links mobile-menu-nav-link"
+                                href="timeline.html">Timeline</a></li>
+                    </ul>
+                </div>
+
+            </div>
         </div>
     </header>
-    <div class="main-cont">
+    <div class=" main-cont border">
         <div class="container mt-2">
             <div class="row justify-content-center">
                 <div class="col-12"></div>
@@ -58,7 +80,8 @@
             <div class="container mt-5">
                 <div class="row justify-content-center">
                     <div class="col-12 p-5">
-                        <h1 class="main-heading text-white text-center text-wrap">On computers I do stuff related
+                        <h1 class="main-heading text-white text-center text-wrap">On computers I do stuff
+                            related
                             to
                             Laravel, Flutter & Native Android.</h1>
                     </div>
