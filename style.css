@@ -149,7 +149,7 @@ body {
 }
 
 .main-cont {
-    height: 90vh;
+    height: 80vh;
 }
 
 .main-heading {
@@ -201,8 +201,7 @@ body {
 
     .socials-cont-col {
         display: flex;
-        height: 10vh;
-        justify-content: flex-end;
+        justify-content: center;
         align-items: flex-end;
     }
 }
