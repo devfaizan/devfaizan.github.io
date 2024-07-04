@@ -24,17 +24,31 @@ document.addEventListener('click', function (event) {
 function toggleMobileMenu(event) {
     const menu = document.getElementById('mobile-menu');
     const button = event.currentTarget;
+    const aboutImgCont = document.getElementById('about-img');
+    const isAboutPage = window.location.pathname.endsWith('about.html');
 
     if (menu.style.display === 'none' || menu.style.display === '') {
         menu.style.display = 'block';
+        if (isAboutPage && aboutImgCont) {
+            aboutImgCont.style.display = 'none';
+        }
     } else {
         menu.style.display = 'none';
+        if (isAboutPage && aboutImgCont) {
+            aboutImgCont.style.display = 'block';
+        }
     }
 }
 
 function closeMobileMenu() {
     const menu = document.getElementById('mobile-menu');
+    const aboutImgCont = document.getElementById('about-img');
+    const isAboutPage = window.location.pathname.endsWith('about.html');
+
     menu.style.display = 'none';
+    if (isAboutPage && aboutImgCont) {
+        aboutImgCont.style.display = 'block';
+    }
 }
 
 // Attach event listeners to the links and cross button after the DOM has loaded
@@ -47,6 +61,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const crossButton = document.querySelector('.cross-button');
     crossButton.addEventListener('click', closeMobileMenu);
 });
+
 
 function setTheme(theme) {
     const body = document.body;
