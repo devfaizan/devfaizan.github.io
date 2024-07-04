@@ -124,6 +124,7 @@ body {
     top: 0;
     left: 0;
     list-style: none;
+    /* z-index: 9; */
 }
 
 .dark-theme .mobile-menu {
@@ -228,5 +229,9 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+
+    .about-img {
+        z-index: -1;
     }
 }
