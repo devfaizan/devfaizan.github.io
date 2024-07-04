@@ -170,6 +170,25 @@ body {
     height: 30px;
 }
 
+.about-img {
+    transform: rotate(2deg);
+    filter: grayscale(1);
+    border-radius: 5px;
+    width: 200px;
+    height: 300px;
+}
+
+.about-heading {
+    line-height: 90%;
+    font-size: 3rem;
+
+}
+
+.about-img:hover {
+    transform: rotate(0deg);
+    filter: grayscale(0);
+}
+
 /* utilites */
 
 .flex-row {
@@ -203,5 +222,11 @@ body {
         display: flex;
         justify-content: center;
         align-items: flex-end;
+    }
+
+    .about-main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 }
