@@ -50,6 +50,10 @@ body {
     font-weight: 300;
 }
 
+.list-items {
+    padding: 0.5rem 3rem;
+}
+
 .list-links {
     font-family: Poppins, sans-serif;
     font-size: 1.2rem;
@@ -57,7 +61,6 @@ body {
     color: rgb(151, 151, 151);
     cursor: pointer;
     text-align: center;
-    padding: 0.5rem 3rem;
     transition: color 0.3s;
 }
 
@@ -146,7 +149,7 @@ body {
 }
 
 .mobile-menu-nav-link {
-    padding: 1.5rem 0rem;
+    padding: 1rem 0rem 1rem 1rem;
 }
 
 .main-cont {
@@ -194,6 +197,36 @@ body {
     transform: rotate(0deg);
     filter: grayscale(0);
 }
+
+.dark-theme .card-body {
+    color: #ffffff !important;
+    background-color: #121212 !important;
+}
+
+.light-theme .buttons {
+    background-color: #121212 !important;
+    color: #ffffff !important;
+    border-color: #121212;
+}
+
+.dark-theme .buttons {
+    background-color: #ffffff !important;
+    color: #121212 !important;
+    border-color: #ffffff;
+}
+
+.light-theme .buttons:hover {
+    background-color: #ffffff !important;
+    border-color: #121212 !important;
+    color: #121212 !important;
+}
+
+.dark-theme .buttons:hover {
+    background-color: #121212 !important;
+    border-color: #ffffff;
+    color: #ffffff !important;
+}
+
 
 /* utilites */
 
