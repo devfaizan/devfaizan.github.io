@@ -185,6 +185,11 @@ body {
 
 }
 
+.about-text, .about-list {
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+
 .about-img:hover {
     transform: rotate(0deg);
     filter: grayscale(0);
@@ -227,17 +232,15 @@ body {
 
     .about-main {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         justify-content: center;
+    }
+
+    .about-img-cont {
+        margin-bottom: 3rem;
     }
 
     .mobile-menu {
         z-index: 1;
     }
-
-    .about-img-cont {
-        /* z-index: -1; */
-    }
-
-
 }
