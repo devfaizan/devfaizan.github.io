@@ -228,6 +228,28 @@ body {
     color: #ffffff !important;
 }
 
+.light-theme .accordion-button {
+    border: 1px solid rgb(214, 214, 214, 0.4);
+    background-color: #ffffff !important;
+    color: #121212 !important;
+}
+
+.light-theme .accordion-item {
+    background-color: #ffffff !important;
+    color: #121212 !important;
+}
+
+.dark-theme .accordion-button {
+    border: 1px solid rgba(214, 214, 214, 0.4);
+    background-color: #121212 !important;
+    color: #ffffff !important;
+}
+
+.dark-theme .accordion-item {
+    background-color: #121212 !important;
+    color: #ffffff !important;
+}
+
 
 /* utilites */
 
@@ -276,5 +298,13 @@ body {
 
     .mobile-menu {
         z-index: 1;
+    }
+
+    .accordion-body {
+        flex-direction: column;
+    }
+
+    .card {
+        margin: 0px 0px 1rem 0px !important;
     }
 }
