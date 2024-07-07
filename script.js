@@ -51,18 +51,6 @@ function closeMobileMenu() {
     }
 }
 
-// Attach event listeners to the links and cross button after the DOM has loaded
-document.addEventListener('DOMContentLoaded', (event) => {
-    const links = document.querySelectorAll('.mobile-menu-nav-link');
-    links.forEach(link => {
-        link.addEventListener('click', closeMobileMenu);
-    });
-
-    const crossButton = document.querySelector('.cross-button');
-    crossButton.addEventListener('click', closeMobileMenu);
-});
-
-
 function setTheme(theme) {
     const body = document.body;
     const menu = document.getElementById('theme-menu');
@@ -73,7 +61,27 @@ function setTheme(theme) {
         body.classList.remove('light-theme');
         body.classList.add('dark-theme');
     }
+    localStorage.setItem('theme', theme);
     menu.style.display = 'none'; // Hide the menu
 }
 
+function loadTheme() {
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme) {
+        setTheme(currentTheme);
+    }
+    else {
+        setTheme(theme);
+    }
+}
 
+document.addEventListener('DOMContentLoaded', (event) => {
+    const links = document.querySelectorAll('.mobile-menu-nav-link');
+    links.forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
+    });
+
+    const crossButton = document.querySelector('.cross-button');
+    crossButton.addEventListener('click', closeMobileMenu);
+    loadTheme();
+});
