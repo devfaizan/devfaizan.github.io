@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     // Get the image and insert it inside the modal - use its "alt" text as a caption
     var modalImg = document.getElementById('img01');
-    var images = document.querySelectorAll('.p-img');
+    var images = document.querySelectorAll('.p-img, .pp-img');
 
     images.forEach(img => {
         img.onclick = function () {
