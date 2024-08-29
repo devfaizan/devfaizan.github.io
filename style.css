@@ -321,6 +321,9 @@ body {
     cursor: pointer;
 }
 
+.light-theme .filter {
+    filter: invert(100%);
+}
 
 /* modal */
 /* utilites */
