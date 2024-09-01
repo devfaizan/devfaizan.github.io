@@ -69,6 +69,11 @@ body {
     color: rgb(45, 45, 45);
 }
 
+.list-links.active {
+    color: rgb(45, 45, 45);
+    border-bottom: 1px solid rgb(45, 45, 45);
+}
+
 .light-theme #top-bar-button-1 {
     border-color: black !important;
 }
@@ -87,6 +92,11 @@ body {
 
 .dark-theme .list-links:hover {
     color: rgb(239, 239, 239);
+}
+
+.dark-theme .list-links.active {
+    color: rgb(239, 239, 239);
+    border-bottom: 1px solid rgb(239, 239, 239);
 }
 
 .thememenu {
