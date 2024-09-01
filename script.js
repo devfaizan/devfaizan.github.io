@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 document.addEventListener('DOMContentLoaded', (event) => {
     // Get the modal
     var modal = document.getElementById('imageModal');
-
+    var modalContent = document.querySelector('.modal-content')
     // Get the image and insert it inside the modal - use its "alt" text as a caption
     var modalImg = document.getElementById('img01');
     var images = document.querySelectorAll('.p-img, .pp-img');
@@ -100,6 +100,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
             modal.style.display = 'block';
             modalImg.src = this.src;
             document.body.style.overflow = 'hidden';
+
+            if (this.classList.contains('pp-img')) {
+                modalContent.style.maxWidth = '1000px';
+            }
+            else {
+                modalContent.style.maxWidth = '700px'; // Default max-width
+            }
         }
     });
 
