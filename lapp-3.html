@@ -91,36 +91,27 @@
                 <div class="col-md-12 text-start">
                     <h3>Problem Statement</h3>
                     <p>
-                        To perform day to day operations VWD needed to upgrade manual system to an automated one.VWD had
-                        to maintain a manual record in the past for their operations.
+                        To mimic session like behaviour for authentication.
                     </p>
                     <h3>How This App Helps?</h3>
                     <p>
-                        This app serves as a dashboard for admins @ VWD. Through this app admins can fulfil Orders,
-                        manage Stock, Products & Suppliers.This app provides insights for Orders, Stock & Products
-                        to have a quick glance what's going on with system. Main purpose this app serves is that
-                        to automate the already existing manual system. Now customers can make orders from mobile
-                        app and these orders can be fulfilled using this dashboard.
+                        With this app now i'm able to get user onboard & provide secure way to use the system. This app
+                        is not a whole alot but it does what it's supposed to do: provide tokens to users of the
+                        system. Good thing about this is that it can be used with any app or system.
                     </p>
                     <h3>Technical Details</h3>
                     <p>
-                        Auth for this app is applied using sessions. When user registers or logs in a session will be
-                        generated. After user logs out session will be destoryed. Only Authenticated admins will be
-                        using this system (or an intruder).
+                        Laravel api routes comes with Laravel Sanctum that provides personal_access_tokens. Problem with
+                        this is that they are stateful(session-based). To work with real token based auth JWT is a good
+                        alternate.
                         <br>
-                        Orders with all required details will be listed in Orders section. Necessary filters are applied
-                        to search orders quickly.
-                        <br>
-                        From Stock comes different Products. When admin adds new product stock quantity reduces.
-                        Newly added products will be listed in <a href="fapp-1.html" class="title-link">Android App</a>.
+                        I have a write up on <a href="https://medium.com/@naziaf" class="title-link">Medium</a>
+                        regrading implementation of JWT with Laravel.
                     </p>
                     <h3>Why This App Sucks?</h3>
                     <p>
                     <ul>
-                        <li>Not mobile-responsive</li>
-                        <li>Lack of User Preferred Pagination</li>
-                        <li>Weak Middleware</li>
-                        <li>No Tokens for Auth</li>
+                        <li>No Cache</li>
                     </ul>
                     </p>
                     <h3>Tools Used</h3>
