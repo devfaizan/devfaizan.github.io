@@ -2,11 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "JetBrains Mono", monospace, 'Poppins', sans-serif;
 }
 
 body {
     width: 100%;
-    font-family: 'JetBrains Mono', 'Poppins', sans-serif;
+    font-family: "JetBrains Mono", monospace, 'Poppins', sans-serif;
     border-radius: 10px;
     transition: background-color 0.3s, color 0.3s;
 }
@@ -174,7 +175,7 @@ body {
 .main-heading {
     font-size: 3.5rem !important;
     font-weight: 800 !important;
-    font-family: 'JetBrains Mono', 'Poppins', sans-serif;
+    font-family: "JetBrains Mono", monospace, 'Poppins', sans-serif;
 }
 
 .light-theme .main-heading {
