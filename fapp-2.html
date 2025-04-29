@@ -92,10 +92,10 @@
         <div class="container mt-5 mb-5">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <a href="https://github.com/devfaizan/restapis-flutter.git" target="_blank"
+                    <a href="https://github.com/devfaizan/sqlite-cache-flutter.git" target="_blank"
                         class="text-decoration-none title-link">
                         <h1 class="fw-bold about-heading">
-                            Demo Project: Rest APIs Done Right
+                            Demo Project: Cache and State Management
                         </h1>
                     </a>
 
@@ -107,52 +107,112 @@
                 <div class="col-md-12 text-start">
                     <h3>Problem Statement</h3>
                     <p>
-                        As the title suggests this project helped me to explore more about REST APIs & JSON data format.
+                        In context of flutter as the app grows it becomes diffcult to manage app state using widgets, so
+                        we have to move state out of widget to make a widget mutable.
+                        <br><br>
+                        For offline first apps or apps where we have to use localStorage to achieve persistent
+                        behaviour or to make apps faster we have to use local database one way or the other.
+                        <br><br>
+                        Basic setState() makes it harder to implement proper state management, and without using any
+                        offline storage method its hard to make apps faster.
+                        <br>
                     </p>
                     <h3>How This App Helps?</h3>
                     <p>
-                        This app is useless & doesn't serve any real purpose.
+                        Meat and potatoes here are my skills to cater problems mentioned earlier like to manage
+                        state,caching using database and even without using database.
+                        <br><br>
+                        Now with Provider app can mutate its state with ease. cache is implemented using SQLite to make
+                        app faster and shared_preferences is used to make persistent theme change, maintain user
+                        sessions and localization(v1.1).
                     </p>
                     <h3>Technical Details</h3>
                     <p>
-                        First data from MySQL is transported into my app. Models are defined to tell how data should
-                        look like & what should be coming or outgoing from my app. After that data is used into screens
-                        to provide appropriate view. If there is any timeout then an error screen tells user that they
-                        are not using some millon dollar app.
+                        On first startup app asks user to create an offline account. once user create their account
+                        sqlite will make user table and user will be advised to log in that account. Now a session is
+                        generated and from now on user will be redirected to home screen unless they clear thier
+                        cache.
+                        <br><br>
+                        As I designed this app to manage pets so when user will add their pet's info they will show up
+                        on home screen.
+                        User interface is pretty self explanatory. but here's a quick overview
+                    <ul>
+                        <li>You get a drawer for quick navigation</li>
+                        <li>By clicking bottom floating button you add pets. Be sure to add correct validated info.</li>
+                        <li>From pet screen view you can edit pet info, add them to favorite pet (one favorite at a
+                            time).</li>
+                        <li>By holding single list item in all pet screen you get a dialog that asks to select options
+                            for edit or delete pet.</li>
+                        <li>Click Top banner in drawer to go to your profile.</li>
+                        <li>you can change app theme by going to drawer then into Settings>Appearence.</li>
+
+                    </ul>
+
                     </p>
                     <h3>What Are The Cons?</h3>
                     <p>
                     <ul>
-                        <li>only good thing about this app is that it uses bare minimum models. Other than that its
-                            trash.</li>
+                        <li>lacks modern bottom navbar.</li>
                     </ul>
                     </p>
                     <h3>Screens</h3>
                     <div id="carouselExampleCaptions" class="carousel slide mb-5" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active text-center">
-                                <img src="https://raw.githubusercontent.com/devfaizan/testimages/fapp/1-splash.jpg"
-                                    alt="fapp-S1" class="p-img">
+                                <img src="https://raw.githubusercontent.com/devfaizan/testimages/fapp/1.png"
+                                    alt="Cache and State Management-1" class="p-img">
                             </div>
                             <div class="carousel-item text-center">
-                                <img src="https://raw.githubusercontent.com/devfaizan/testimages/fapp/2-Form.jpg"
-                                    alt="fapp-S2" class="p-img">
+                                <img src="https://raw.githubusercontent.com/devfaizan/testimages/fapp/2.png"
+                                    alt="Cache and State Management-2" class="p-img">
                             </div>
                             <div class="carousel-item text-center">
-                                <img src="https://raw.githubusercontent.com/devfaizan/testimages/fapp/3-Users.jpg"
-                                    alt="fapp-S3" class="p-img">
+                                <img src="https://raw.githubusercontent.com/devfaizan/testimages/fapp/2-error.png"
+                                    alt="Cache and State Management-2-error" class="p-img">
                             </div>
                             <div class="carousel-item text-center">
-                                <img src="https://raw.githubusercontent.com/devfaizan/testimages/fapp/4-Editusername.jpg"
-                                    alt="fapp-S4" class="p-img">
+                                <img src="https://raw.githubusercontent.com/devfaizan/testimages/fapp/3.png"
+                                    alt="Cache and State Management-3" class="p-img">
                             </div>
                             <div class="carousel-item text-center">
-                                <img src="https://raw.githubusercontent.com/devfaizan/testimages/fapp/5-Deleteuser.jpg"
-                                    alt="fapp-S5" class="p-img">
+                                <img src="https://raw.githubusercontent.com/devfaizan/testimages/fapp/4.png"
+                                    alt="Cache and State Management-4" class="p-img">
                             </div>
                             <div class="carousel-item text-center">
-                                <img src="https://raw.githubusercontent.com/devfaizan/testimages/fapp/6-Errors.jpg"
-                                    alt="fapp-S6" class="p-img">
+                                <img src="https://raw.githubusercontent.com/devfaizan/testimages/fapp/5.png"
+                                    alt="Cache and State Management-5" class="p-img">
+                            </div>
+                            <div class="carousel-item text-center">
+                                <img src="https://raw.githubusercontent.com/devfaizan/testimages/fapp/6.png"
+                                    alt="Cache and State Management-6" class="p-img">
+                            </div>
+                            <div class="carousel-item text-center">
+                                <img src="https://raw.githubusercontent.com/devfaizan/testimages/fapp/7.png"
+                                    alt="Cache and State Management-7" class="p-img">
+                            </div>
+                            <div class="carousel-item text-center">
+                                <img src="https://raw.githubusercontent.com/devfaizan/testimages/fapp/8.png"
+                                    alt="Cache and State Management-8" class="p-img">
+                            </div>
+                            <div class="carousel-item text-center">
+                                <img src="https://raw.githubusercontent.com/devfaizan/testimages/fapp/9.png"
+                                    alt="Cache and State Management-9" class="p-img">
+                            </div>
+                            <div class="carousel-item text-center">
+                                <img src="https://raw.githubusercontent.com/devfaizan/testimages/fapp/10.png"
+                                    alt="Cache and State Management-10" class="p-img">
+                            </div>
+                            <div class="carousel-item text-center">
+                                <img src="https://raw.githubusercontent.com/devfaizan/testimages/fapp/11.png"
+                                    alt="Cache and State Management-11" class="p-img">
+                            </div>
+                            <div class="carousel-item text-center">
+                                <img src="https://raw.githubusercontent.com/devfaizan/testimages/fapp/12.png"
+                                    alt="Cache and State Management-12" class="p-img">
+                            </div>
+                            <div class="carousel-item text-center">
+                                <img src="https://raw.githubusercontent.com/devfaizan/testimages/fapp/13.png"
+                                    alt="Cache and State Management-13" class="p-img">
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
@@ -172,10 +232,8 @@
                             <div class="col-12 mt-4 mb-4">
                                 <img src="https://raw.githubusercontent.com/devfaizan/testimages/images/flutter.png"
                                     alt="flutter" title="Flutter" class="me-3">
-                                <img src="https://raw.githubusercontent.com/devfaizan/testimages/images/json.png"
-                                    alt="json" title="JSON" class="me-3">
-                                <img src="https://raw.githubusercontent.com/devfaizan/testimages/images/rest.png"
-                                    alt="restapi" title="REST APIs" class="me-3 filter">
+                                <img src="https://raw.githubusercontent.com/devfaizan/testimages/images/sqlite-smol.png"
+                                    alt="sqlite" title="SQLite" class="me-3">
                             </div>
                         </div>
                     </div>
