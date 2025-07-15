@@ -194,9 +194,11 @@ body {
 .about-img {
     transform: rotate(2deg);
     filter: grayscale(1);
+    filter: blur(4px);
+    filter: opacity(50%);
     border-radius: 5px;
-    width: 200px;
-    height: 300px;
+    width:  400px;
+    height: 500px;
 }
 
 .about-heading {
